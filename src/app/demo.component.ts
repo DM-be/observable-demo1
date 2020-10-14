@@ -9,10 +9,7 @@ import {
 import { fromEvent } from "rxjs";
 import { map, throttleTime } from "rxjs/operators";
 
-interface MouseClick {
-  x: number;
-  y: number;
-}
+// add mouseclick interface here
 
 @Component({
   selector: "demo",
