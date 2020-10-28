@@ -29,7 +29,7 @@ export class DemoComponent implements OnInit {
     const button: HTMLButtonElement = document.querySelector("button");
     button.addEventListener("click", (e: MouseEvent) => console.log(e.clientX));
 
-    // lets convert this to an observables
+    // lets convert this to an observable
 
     // but why use observables? Eventlisteners do the same thing?
     // the power comes from operators!
@@ -49,9 +49,9 @@ export class DemoComponent implements OnInit {
     // })
 
     // so alot of code for something relatively easy
-    // with observables we can view the events as a stream we can "funnel"
+    // with observables we can consider the values as a stream that we can funnel
     // we can extract only data we are interested in through this funnel
-    // this is done by using .pipe() method on the observable
+    // this is done by using .pipe() on the observable
 
     // now let's say we want to change the event into a custom object
     // lets define an interface --> mouseclicked
