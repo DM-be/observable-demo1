@@ -27,17 +27,21 @@ import { map, throttleTime } from "rxjs/operators";
 export class DemoComponent implements OnInit {
   ngOnInit(): void {
     const button: HTMLButtonElement = document.querySelector("button");
-    button.addEventListener("click", (e: MouseEvent) => console.log(e.clientX));
+    // button.addEventListener("click", (e: MouseEvent) => console.log(e.clientX));
 
     // lets convert this to an observable
 
-    // but why use observables? Eventlisteners do the same thing?
-    // the power comes from operators!
-    // we have a stream that we can manipulate to our every needs using operators
 
-    // what if we are only interested in in a mouse click event every 1 second?
+    // but why use observables? Seems more difficult
+    // you can already see we are building sort of a "funnel" (trechter) where we get the data from the source (click) and get it down in the subscribe
+  
+    // the power comes from operators!
+    // we have a stream in which we can transform the data in the way it is handled, used or looks like!
+
+    // what if we we want to prevent button spamming? We are only interested in the click event every one second
+
     // using event listeners we need the following:
-    // (don't forget to remove the previous event listener)
+ 
 
     // let rate = 1000;
     // let lastClick = Date.now() - rate;
@@ -48,9 +52,9 @@ export class DemoComponent implements OnInit {
     // }
     // })
 
-    // so alot of code for something relatively easy
-    // with observables we can consider the values as a stream that we can funnel
-    // we can extract only data we are interested in through this funnel
+    // so alot of code for something "easy"
+
+    // with observables we can extract only data we are interested in through this funnel
     // this is done by using .pipe() on the observable
 
     // now let's say we want to change the event into a custom object
