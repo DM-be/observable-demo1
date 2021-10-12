@@ -25,6 +25,7 @@ import { map, scan, throttleTime } from 'rxjs/operators';
   ],
 })
 export class DemoComponent implements OnInit {
+
   ngOnInit(): void {
     const button: HTMLButtonElement = document.querySelector('button');
     //  button.addEventListener("click", (e: MouseEvent) => console.log(e.clientX));
